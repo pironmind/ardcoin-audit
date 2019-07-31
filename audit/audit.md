@@ -6,6 +6,7 @@
 ```
 ARDCOIN
 ```
+Website: http://ardcoin.com
 
 #### Tokens Details
  
@@ -25,22 +26,22 @@ Decimals    :   2
 
 https://etherscan.io/address/0xb96f547da042737c95d7f9397cd86068d0a817a8#code
 
-#### Conclusion
+### Conclusion
 
-Смарт контракт польностью построен на основе фреймоврка с откритым исходным кодом OpenZeppelin(https://github.com/OpenZeppelin) .
-Исходный код предоставляеться без указания оригинальной лицензии.
-Взамен этому указана лицензия (c) Atu @ DataScience.mn Ltd 2018. The MIT License.
+The smart contract is completely built on the basis of the OpenZeppelin framework (https://github.com/OpenZeppelin), distributed under MIT license. 
 
-Критические:
+The source code is provided without indicating the original license. Instead, a license is indicated as (c) Atu @ DataScience.mn Ltd 2018. The MIT License.
 
-- не обнаружены
+**Critical:**
 
-Некритичесчкие:
+- not detected
 
-- указание лицензии
-- конракт MintableToken подключен и наследуеться но нигде не используеться.
-- контракт ArdCoin использование эксперемнтальной для solidity 0.4.21 ключевого слова "constructor", Prior to version 0.4.22, constructors were defined as functions with the same name as the contract. This syntax was deprecated and is not allowed anymore in version 0.5.0.
+**Uncritical:**
 
+- license indication
+
+- The MintableToken contract is connected and inherited but not used anywhere.
+ArdCoin contract using experimental for solidity 0.4.21 of the keyword "constructor", added in version 0.4.22.
 
 
 ### Source code
