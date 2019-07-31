@@ -1,30 +1,25 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.5.8;
 
-// ----------------------------------------------------------------------------
-// 'ARDCOIN' STO contract
-//
-// Symbol      : ARDMN
-// Name        : ArdCoin STO
-// Total supply: 1,000,000,000.00
-// Decimals    : 2
-//
-// (c) Atu @ DataScience.mn Ltd 2018. The MIT License.
-// ----------------------------------------------------------------------------
+import "./ERC20Mintable.sol";
+import "./ERC20Burnable.sol";
+import "./ERC20Metadata.sol";
+import "./ERC20Detailed.sol";
 
-import "./StandardToken.sol";
-import "./BurnableToken.sol";
-import "./MintableToken.sol";
-contract ArdCoin is StandardToken, MintableToken, BurnableToken  {
-    string public symbol;
-    string public name;
-    uint8 public decimals;
+/**
+ @title ArdCoin - ERC20 Token Contract
 
-    constructor(string _symbol, string _name, uint256 _supply, uint8 _decimals) public {
-        symbol = _symbol;
-        name = _name;
-        decimals = _decimals;
-        totalSupply_ = _supply * 10**uint(decimals);
-        balances[msg.sender] = totalSupply_;
-        emit Transfer(address(0), msg.sender, totalSupply_);
+ Developed by https://github.com/pironmind
+ License: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/LICENSE
+*/
+contract ArdCoin is ERC20Burnable, ERC20Mintable, ERC20Metadata, ERC20Detailed  {
+
+    /**
+    * Constructor
+    */
+    constructor(string memory _name, string memory _symbol, uint256 _supply, uint8 _decimals)
+    public
+    ERC20Detailed(_name, _symbol,_decimals)
+    {
+        mint(owner(), _supply * 10**uint256(decimals()));
     }
 }

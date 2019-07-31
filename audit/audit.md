@@ -15,7 +15,7 @@ Compiler version 0.4.21
 
 Symbol      :   ARDMN
 Name        :   ArdCoin STO
-Total supply:   1,000,000,000.00
+Total supply:   5,100,000,000.00
 Decimals    :   2
 
 (c) Atu @ DataScience.mn Ltd 2018. The MIT License.
